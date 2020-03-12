@@ -14,7 +14,6 @@ export class VacancyService {
   }
 
   async findByCompanyId(companyId: String): Promise<Vacancy[]> {
-    console.log(companyId)
     return this.vacancyModel.find({'companyId':companyId}).exec();
   }
 

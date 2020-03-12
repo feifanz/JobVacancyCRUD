@@ -1,0 +1,54 @@
+# login
+query{
+  login(username:"mark", password:"mark")
+}
+
+# fetch 
+query{
+  getVacancies{
+    _id,
+    title,
+    description,
+    expiredAt
+  }
+}
+
+# create
+mutation{
+      createVacancy(input:{
+        title:"predictiveHire job vacancy",
+        description:"description of that job",
+        expiredAt:"2020-03-30"
+      }){
+        ok,
+        vacancy{
+          _id,
+          title,
+          description,
+          expiredAt
+        }
+      }
+}
+
+# update
+mutation{    
+  updateVacancy(id:"5e6a03bdc87791001f7f997b",input:{
+    title:"predictiveHire job title updated"
+  }){
+    ok,
+    vacancy{
+      _id,
+      title,
+      description,
+      expiredAt
+    }
+  }
+}
+
+# delete
+mutation{
+  deleteVacancy(id:"5e6a03bdc87791001f7f997b"){
+    ok,
+    deletedCount
+  }
+}

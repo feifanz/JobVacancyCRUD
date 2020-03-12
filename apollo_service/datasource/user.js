@@ -4,7 +4,7 @@ const JwtAuth = require('../auth/jwtAuth');
 class UserAPI extends RESTDataSource {
   constructor() {
     super();
-    this.baseURL = 'http://localhost:3000/';
+    this.baseURL = process.env.NEST_API || 'http://localhost:3000/';
   }
 
   async login(username, password) {

@@ -8,6 +8,7 @@ const JwtAuth = require('./auth/jwtAuth');
 // The ApolloServer constructor requires two parameters: your schema
 // definition and your set of resolvers.
 const server = new ApolloServer({ 
+    debug:false,
     typeDefs, 
     resolvers,
     context: ({ req }) => {

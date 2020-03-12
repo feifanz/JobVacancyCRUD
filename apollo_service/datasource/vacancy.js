@@ -4,7 +4,7 @@ const { UserInputError} = require('apollo-server');
 class VacancyAPI extends RESTDataSource {
   constructor() {
     super();
-    this.baseURL = 'http://localhost:3000/';
+    this.baseURL = process.env.NEST_API || 'http://localhost:3000/';
   }
 
     // leaving this inside the class to make the class easier to test
