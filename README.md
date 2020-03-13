@@ -8,6 +8,7 @@
 - login first to get the authorization token
 - add this authorization token to http header with every query
   {"authorization": {your authorization token} }
+- sampel queries can be found at ```test/graphqlQuery```
 
 ##### Authentication and Authorization Rule
 - user role can view vacanies belong to his company
