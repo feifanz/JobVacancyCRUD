@@ -1,6 +1,5 @@
 #### Component Diagram
-![](https://github.com/feifanz/predictiveHireTest/blob/master/components.png)
-
+<img src="https://github.com/feifanz/predictiveHireTest/blob/master/components.png" width="700">
 #### How to Run
 - cd to the delpoyment folder
 - run ```$ sh ./build-images.sh``` to build docker images
