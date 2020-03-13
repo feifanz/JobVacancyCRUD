@@ -1,13 +1,12 @@
 #### Component Diagram
-![](https://github.com/feifanz/predictiveHireTest/blob/master/components.png)
-
+<img src="https://github.com/feifanz/predictiveHireTest/blob/master/components.png" width="700">
 #### How to Run
 - cd to the delpoyment folder
 - run ```$ sh ./build-images.sh``` to build docker images
 - run ```$ docker-compose up``` to start three services, which are
-	- mongodb service: 127.0.0.1:27017
-	- apollo graphql service: 127.0.0.1:4000
-	- nest.js Restful service: 127.0.0.1:3000
+  - mongodb service: 127.0.0.1:27017
+  - apollo graphql service: 127.0.0.1:4000
+  - nest.js Restful service: 127.0.0.1:3000
 
 
 #### 1. apollo graphql service
@@ -51,16 +50,16 @@
   type Query {
     // get vacancies belong to current user
     getVacancies: [Vacancy]
-	// login, return auth token if success
+  // login, return auth token if success
     login(username:String, password:String):String
   }
 
   type Mutation{
     // admin role
     createVacancy(input: VacancyInput): createOrUpdateResponse
-	// admin role, user belongs to this vacancy's company
+  // admin role, user belongs to this vacancy's company
     updateVacancy(id:String, input:VacancyInput):  createOrUpdateResponse
-	// admin role, user belongs to this vacancy's company
+  // admin role, user belongs to this vacancy's company
     deleteVacancy(id:String): deleteResponse
   }
 ```
@@ -84,7 +83,7 @@
 
 #### 3. mongodb service
 - There are total three collections:
-	- companies: { name:string ,address:string }
-	- users: { name:string, username:string, password:string, role:(admin | user), customerId:ObjectId}
-	- vacancies: { title:string, description:string, expiredAt:datetime, companyId:ObjectId}
+  - companies: { name:string ,address:string }
+  - users: { name:string, username:string, password:string, role:(admin | user), customerId:ObjectId}
+  - vacancies: { title:string, description:string, expiredAt:datetime, companyId:ObjectId}
 - some sample data have been inserted
